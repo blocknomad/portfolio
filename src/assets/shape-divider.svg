@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 800" width="1920" height="800">
+	<style>
+		:root { background-color: #23364a }
+		path { fill: #0e2439 }
+	</style>
+	<path d="M 0 0 L 0 800 C 0 0 960 600 1920 0 L 1920 0 Z" />
+</svg>

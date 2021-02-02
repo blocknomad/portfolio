@@ -44,20 +44,41 @@
 </template>
 
 <style scoped>
+section {
+  padding: 7vh 0;
+  position: relative;
+}
+
+section::after {
+  content: " ";
+  display: block;
+  background-image: url(../assets/shape-divider.svg);
+  background-size: 1920px 800px;
+  width: 100%;
+  height: 800px;
+  position: absolute;
+  top: calc(100% - 50vw);
+  left: 0;
+  z-index: 1;
+}
+
 .profile {
   display: flex;
   flex-direction: column;
   align-items: center;
   column-gap: 40px;
-  margin-top: 7vh;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
 }
 
 .profile__picture {
-  width: 350px;
+  width: 300px;
   max-width: 70vw;
   border-radius: 50%;
   overflow: hidden;
-  border: 22px solid #ffffff16;
+  border: 22px solid var(--background-color--lighter);
 }
 
 .profile__description h1 {
@@ -74,12 +95,32 @@
 .profile__links {
   display: flex;
   column-gap: 40px;
-  background-color: #ffffff16;
+  background-color: var(--background-color--lighter);
   padding: 14px 28px;
   border-radius: 6px;
 }
 
 .profile__links__item img {
   width: 24px;
+}
+
+@media only screen and (min-width: 630px) {
+  section::after {
+    top: calc(100% - 30vw);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  section::after {
+    top: calc(100% - 10vw);
+  }
+}
+
+@media only screen and (min-width: 1921px) {
+  section::after {
+    background-size: cover;
+    height: 41.66vw;
+    top: calc(100% - 10vw);
+  }
 }
 </style>
