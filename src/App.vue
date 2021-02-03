@@ -48,8 +48,9 @@ h4 {
   font-size: 1.8rem;
 }
 
-p, li {
-  opacity: .6;
+p,
+li {
+  opacity: 0.6;
   line-height: 1.9rem;
 }
 
