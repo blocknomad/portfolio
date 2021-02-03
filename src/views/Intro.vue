@@ -13,7 +13,7 @@
         <a
           href="mailto:yuri.fabris@gmail.com"
           class="profile__links__item"
-          title="LinkedIn"
+          title="Email"
         >
           <img src="../assets/email.svg" />
         </a>
@@ -47,6 +47,7 @@
 section {
   padding: 7vh 0;
   position: relative;
+  background-color: var(--background-color);
 }
 
 section::after {
@@ -54,10 +55,11 @@ section::after {
   display: block;
   background-image: url(../assets/shape-divider.svg);
   background-size: 1920px 800px;
+  background-position-x: -200px;
   width: 100%;
   height: 800px;
   position: absolute;
-  top: calc(100% - 50vw);
+  top: 60%;
   left: 0;
   z-index: 1;
 }
@@ -84,7 +86,6 @@ section::after {
 .profile__description h1 {
   font-size: 2.8rem;
   margin: 2.5rem 0 1.5rem;
-  letter-spacing: 0.2rem;
 }
 
 .profile__description p {
@@ -100,19 +101,23 @@ section::after {
   border-radius: 6px;
 }
 
+.profile__links__item {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.profile__links__item:hover {
+  opacity: 1;
+}
+
 .profile__links__item img {
   width: 24px;
 }
 
-@media only screen and (min-width: 630px) {
-  section::after {
-    top: calc(100% - 30vw);
-  }
-}
-
 @media only screen and (min-width: 992px) {
   section::after {
-    top: calc(100% - 10vw);
+    top: 70%;
+    background-position-x: 0px;
   }
 }
 
