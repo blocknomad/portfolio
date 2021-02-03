@@ -76,20 +76,19 @@ section::after {
 }
 
 .profile__picture {
-  width: 300px;
-  max-width: 70vw;
+  width: 270px;
+  max-width: 60vw;
   border-radius: 50%;
   overflow: hidden;
   border: 22px solid var(--background-color--lighter);
 }
 
 .profile__description h1 {
-  font-size: 2.8rem;
   margin: 2.5rem 0 1.5rem;
 }
 
 .profile__description p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 0 3rem;
 }
 

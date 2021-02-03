@@ -26,7 +26,24 @@ h3,
 h4,
 h5,
 h6 {
-  letter-spacing: 0.2rem;
+  margin: 0;
+  letter-spacing: 0.15rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.6rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 992px) {

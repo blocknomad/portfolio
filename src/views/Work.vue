@@ -18,12 +18,15 @@
           <img :src="require(`../assets/work/${work.img}`)" />
         </div>
       </div>
+      <Sled v-if="currentWork === 'sled'" />
     </div>
   </section>
 </template>
 
 <script>
 import { ref } from "vue";
+
+import Sled from "@/views/Sled.vue";
 
 const works = [
   {
@@ -45,6 +48,7 @@ const works = [
 ];
 
 export default {
+  components: { Sled },
   setup() {
     const currentWork = ref("sled");
     return { currentWork, works };
@@ -64,25 +68,21 @@ export default {
 .work__content {
   position: relative;
   z-index: 2;
-  max-width: 1700px;
-}
-
-.work__content__title {
-  font-size: 2.4rem;
+  max-width: 1200px;
 }
 
 .work__content__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 15px;
-  row-gap: 15px;
+  column-gap: 10px;
+  row-gap: 10px;
   margin-top: 5rem;
 }
 
 .work__content__cards__item {
   background-color: var(--background-color--contrast);
   border-radius: 10px;
-  padding: 20px 40px;
+  padding: 30px 40px;
   opacity: 0.5;
   transition: opacity 0.2s;
   display: flex;
@@ -98,12 +98,12 @@ export default {
 
 .work__content__cards__item img {
   max-width: 100%;
-  max-height: 70px;
+  max-height: 60px;
 }
 
 @media only screen and (min-width: 992px) {
   .work {
-    padding: 200px 12%;
+    padding: 200px 12% 100px;
   }
 
   .work__content__cards {
