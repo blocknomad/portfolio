@@ -98,7 +98,7 @@ export default {
 
 .work__content__cards__item img {
   max-width: 100%;
-  max-height: 60px;
+  max-height: 40px;
 }
 
 @media only screen and (min-width: 992px) {

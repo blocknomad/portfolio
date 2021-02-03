@@ -77,6 +77,7 @@ section::after {
 
 .profile__picture {
   width: 270px;
+  height: 270px;
   max-width: 60vw;
   border-radius: 50%;
   overflow: hidden;
@@ -88,7 +89,6 @@ section::after {
 }
 
 .profile__description p {
-  font-size: 1.2rem;
   margin: 0 0 3rem;
 }
 

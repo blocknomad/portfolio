@@ -54,7 +54,13 @@
       </div>
     </div>
     <h4>About this project</h4>
+    <p style="margin-bottom: 40px">
+      <slot name="about"></slot>
+    </p>
     <h4>Technical set</h4>
+    <ul>
+      <slot name="technologies"></slot>
+    </ul>
   </div>
 </template>
 
@@ -144,7 +150,7 @@ export default {
 }
 
 .project__medias {
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .project__medias__slider {
