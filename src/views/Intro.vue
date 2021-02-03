@@ -79,6 +79,7 @@ section::after {
   width: 270px;
   height: 270px;
   max-width: 60vw;
+  max-height: 60vw;
   border-radius: 50%;
   overflow: hidden;
   border: 22px solid var(--background-color--lighter);

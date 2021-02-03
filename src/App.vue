@@ -53,7 +53,4 @@ li {
   opacity: 0.6;
   line-height: 1.9rem;
 }
-
-@media only screen and (min-width: 992px) {
-}
 </style>
