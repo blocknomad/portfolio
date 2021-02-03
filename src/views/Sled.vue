@@ -1,12 +1,5 @@
 <template>
-  <Project
-    :medias="[
-      { path: 'sled-1.png', type: 'image' },
-      { path: 'sled-2.png', type: 'image' },
-      { path: 'sled-3.png', type: 'image' },
-      { path: 'sled-4.png', type: 'image' },
-    ]"
-  >
+  <Project :medias="['sled-1.png', 'sled-2.png', 'sled-3.png', 'sled-4.png']">
     <template v-slot:title>
       Sled
     </template>
@@ -33,7 +26,9 @@
       <li>Design system</li>
       <li>Responsive Web Development</li>
       <li>A/B Testing</li>
+      <li>SEO</li>
       <li>Bit</li>
+      <li>TypeScript</li>
       <li>Node.js</li>
       <li>FaunaDB</li>
       <li>Ghost CMS</li>

@@ -8,33 +8,21 @@
         <slot name="summary"></slot>
       </p>
     </div>
+
     <div
       class="project__medias"
       @mouseenter="stopSlide()"
       @mouseleave="startSlide()"
     >
       <div class="project__medias__slider">
-        <template v-for="media in medias" :key="media.path">
+        <template v-for="media in medias" :key="media">
           <div class="project__medias__slider__item">
             <div class="project__medias__slider__item__browser-frame">
               <div></div>
               <div></div>
               <div></div>
             </div>
-            <img
-              :src="require(`../assets/work/${media.path}`)"
-              v-if="media.type === 'image'"
-            />
-            <video v-else autoplay infinite>
-              <!-- <source
-                :src="require(`../assets/work/${media.path}.webm`)"
-                type="video/webm"
-              /> -->
-              <source
-                :src="require(`../assets/work/${media.path}.mp4`)"
-                type="video/mp4"
-              />
-            </video>
+            <img :src="require(`../assets/work/${media}`)" />
           </div>
         </template>
       </div>
@@ -53,11 +41,13 @@
         ></div>
       </div>
     </div>
+
     <h4>About this project</h4>
     <p style="margin-bottom: 40px">
       <slot name="about"></slot>
     </p>
-    <h4>Technical set</h4>
+
+    <h4>Technical sheet</h4>
     <ul>
       <slot name="technologies"></slot>
     </ul>
@@ -181,11 +171,11 @@ export default {
 
 @keyframes enterFromLeft {
   0% {
-    transform: translateX(-100%) scale(1.02);
+    transform: translateX(-100%) scale(1.01);
   }
 
   85% {
-    transform: translateX(0%) scale(1.02);
+    transform: translateX(0%) scale(1.01);
   }
 
   100% {
@@ -195,11 +185,11 @@ export default {
 
 @keyframes enterFromRight {
   0% {
-    transform: translateX(100%) scale(1.02);
+    transform: translateX(100%) scale(1.01);
   }
 
   85% {
-    transform: translateX(0%) scale(1.02);
+    transform: translateX(0%) scale(1.01);
   }
 
   100% {
@@ -215,15 +205,15 @@ export default {
 .project__medias__slider__item__browser-frame {
   background-color: #ddd;
   width: 100%;
-  padding: 6px 12px;
+  padding: 3px 6px;
   box-sizing: border-box;
   display: flex;
-  column-gap: 5px;
+  column-gap: 3px;
 }
 
 .project__medias__slider__item__browser-frame div {
-  height: 12px;
-  width: 12px;
+  height: 7px;
+  width: 7px;
   border-radius: 50%;
 }
 
@@ -266,6 +256,16 @@ export default {
 @media only screen and (min-width: 992px) {
   .project {
     padding: 40px 50px;
+  }
+
+  .project__medias__slider__item__browser-frame {
+    padding: 6px 12px;
+    column-gap: 5px;
+  }
+
+  .project__medias__slider__item__browser-frame div {
+    height: 12px;
+    width: 12px;
   }
 }
 </style>

@@ -19,6 +19,9 @@
         </div>
       </div>
       <Sled v-if="currentWork === 'sled'" />
+      <Vanna v-else-if="currentWork === 'vanna'" />
+      <Elliottro v-else-if="currentWork === 'elliottro'" />
+      <Appetize v-else-if="currentWork === 'appetize'" />
     </div>
   </section>
 </template>
@@ -27,6 +30,9 @@
 import { ref } from "vue";
 
 import Sled from "@/views/Sled.vue";
+import Vanna from "@/views/Vanna.vue";
+import Elliottro from "@/views/Elliottro.vue";
+import Appetize from "@/views/Appetize.vue";
 
 const works = [
   {
@@ -48,7 +54,7 @@ const works = [
 ];
 
 export default {
-  components: { Sled },
+  components: { Sled, Vanna, Elliottro, Appetize },
   setup() {
     const currentWork = ref("sled");
     return { currentWork, works };
@@ -59,7 +65,7 @@ export default {
 <style scoped>
 .work {
   position: relative;
-  padding: 100px 20px;
+  padding: 100px 20px 40px;
   background-color: var(--background-color--lighter);
   display: flex;
   justify-content: center;
