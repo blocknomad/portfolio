@@ -10,6 +10,7 @@ body {
   margin: 0;
   --background-color: #0e2439;
   --background-color--lighter: #23364a;
+  --background-color--lighter2: #4c5a67;
   --background-color--contrast: white;
 }
 
