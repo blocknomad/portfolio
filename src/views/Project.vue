@@ -153,7 +153,7 @@ export default {
 
 <style>
 .spinner {
-  margin: 120px auto;
+  margin: 160px auto;
   background-color: var(--background-color);
   height: 90px;
   width: 90px;
