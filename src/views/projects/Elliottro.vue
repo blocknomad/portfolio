@@ -1,5 +1,11 @@
 <template>
-  <Project :medias="['elliottro-1.png', 'elliottro-2.png', 'elliottro-3.png']">
+  <Project
+    :medias="[
+      { path: 'elliottro-1.png', alt: 'Elliottro login page' },
+      { path: 'elliottro-2.png', alt: 'Elliottro screen creation page' },
+      { path: 'elliottro-3.png', alt: 'Elliottro screen results page' },
+    ]"
+  >
     <template v-slot:title>
       Elliottro
     </template>

@@ -1,6 +1,14 @@
 <template>
   <Project
-    :medias="['vanna-1.png', 'vanna-2.png', 'vanna-3.png', 'vanna-4.png']"
+    :medias="[
+      { path: 'vanna-1.png', alt: 'Vanna dashboard home' },
+      { path: 'vanna-2.png', alt: 'Vanna subscription creation modal' },
+      {
+        path: 'vanna-3.png',
+        alt: 'Vanna earnings and expenses heatmap calendar',
+      },
+      { path: 'vanna-4.png', alt: 'Vanna settings page' },
+    ]"
   >
     <template v-slot:title>
       Vanna

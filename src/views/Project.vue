@@ -15,14 +15,17 @@
       @mouseleave="startSlide()"
     >
       <div class="project__medias__slider">
-        <template v-for="media in medias" :key="media">
+        <template v-for="media in medias" :key="media.path">
           <div class="project__medias__slider__item">
             <div class="project__medias__slider__item__browser-frame">
               <div></div>
               <div></div>
               <div></div>
             </div>
-            <img :src="require(`../assets/projects/${media}`)" />
+            <img
+              :src="require(`../assets/projects/${media.path}`)"
+              :alt="media.alt"
+            />
           </div>
         </template>
       </div>

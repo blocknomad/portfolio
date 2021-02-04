@@ -1,10 +1,13 @@
 <template>
   <Project
     :medias="[
-      'appetize-1.png',
-      'appetize-2.png',
-      'appetize-3.png',
-      'appetize-4.png',
+      { path: 'appetize-1.png', alt: 'Appetize website hero' },
+      { path: 'appetize-2.png', alt: 'Appetize contact form' },
+      { path: 'appetize-3.png', alt: 'Appetize partners grid' },
+      {
+        path: 'appetize-4.png',
+        alt: 'Appetize interactive infographic that explains its solution',
+      },
     ]"
   >
     <template v-slot:title>
@@ -23,6 +26,7 @@
       <li>Wordpress</li>
       <li>HTML</li>
       <li>CSS</li>
+      <li>Responsive Web Development</li>
       <li>JQuery</li>
     </template>
   </Project>

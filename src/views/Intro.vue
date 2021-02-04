@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="profile">
-      <img src="../assets/profile.jpg" class="profile__picture" />
+      <img src="../assets/profile.jpg" class="profile__picture" alt="Me" />
       <div class="profile__description">
         <h1>Yuri Jean Fabris</h1>
         <p>
@@ -15,28 +15,28 @@
           class="profile__links__item"
           title="Email"
         >
-          <img src="../assets/email.svg" />
+          <img src="../assets/email.svg" alt="Email icon" />
         </a>
         <a
           href="https://www.linkedin.com/in/yuri-jean-fabris/"
           class="profile__links__item"
           title="LinkedIn"
         >
-          <img src="../assets/linkedin.svg" />
+          <img src="../assets/linkedin.svg" alt="LinkedIn icon" />
         </a>
         <a
           href="https://github.com/yurijean"
           class="profile__links__item"
           title="GitHub"
         >
-          <img src="../assets/github.svg" />
+          <img src="../assets/github.svg" alt="GitHub icon" />
         </a>
         <a
           href="https://twitter.com/_yurijean"
           class="profile__links__item"
           title="Twitter"
         >
-          <img src="../assets/twitter.svg" />
+          <img src="../assets/twitter.svg" alt="Twitter icon" />
         </a>
       </div>
     </div>

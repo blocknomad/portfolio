@@ -6,22 +6,22 @@
         <div
           :class="
             `work__content__cards__item ${
-              currentWork === work.name
+              currentProject === project.name
                 ? 'work__content__cards__item--active'
                 : ''
             }`
           "
-          @click="currentWork = work.name"
-          v-for="work in works"
-          :key="work.name"
+          @click="currentProject = project.name"
+          v-for="project in projects"
+          :key="project.name"
         >
-          <img :src="require(`../assets/projects/${work.img}`)" />
+          <img :src="require(`../assets/projects/${project.img}`)" :alt="project.alt" />
         </div>
       </div>
-      <Sled v-if="currentWork === 'sled'" />
-      <Elliottro v-else-if="currentWork === 'elliottro'" />
-      <Vanna v-else-if="currentWork === 'vanna'" />
-      <Appetize v-else-if="currentWork === 'appetize'" />
+      <Sled v-if="currentProject === 'sled'" />
+      <Elliottro v-else-if="currentProject === 'elliottro'" />
+      <Vanna v-else-if="currentProject === 'vanna'" />
+      <Appetize v-else-if="currentProject === 'appetize'" />
     </div>
   </section>
 </template>
@@ -34,30 +34,34 @@ import Vanna from "@/views/projects/Vanna.vue";
 import Elliottro from "@/views/projects/Elliottro.vue";
 import Appetize from "@/views/projects/Appetize.vue";
 
-const works = [
+const projects = [
   {
     name: "sled",
     img: "sled-logo.svg",
+    alt: "Sled logo",
   },
   {
     name: "elliottro",
     img: "elliottro-logo.svg",
+    alt: "Elliottro logo",
   },
   {
     name: "vanna",
     img: "vanna-logo.png",
+    alt: "Vanna logo",
   },
   {
     name: "appetize",
     img: "appetize-logo.png",
+    alt: "Appetize logo",
   },
 ];
 
 export default {
   components: { Sled, Vanna, Elliottro, Appetize },
   setup() {
-    const currentWork = ref("sled");
-    return { currentWork, works };
+    const currentProject = ref("sled");
+    return { currentProject, projects };
   },
 };
 </script>
@@ -89,7 +93,7 @@ export default {
   background-color: var(--background-color--contrast);
   border-radius: 10px;
   padding: 30px 40px;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity 0.2s;
   display: flex;
   align-items: center;
