@@ -26,11 +26,26 @@
               <div></div>
               <div></div>
             </div>
-            <img
-              :src="require(`../assets/projects/${media.path}`)"
-              :alt="media.alt"
-              loading="lazy"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                :srcset="
+                  require(`../assets/projects/${media.path.replace(
+                    /[0-9a-z]+$/i,
+                    'webp'
+                  )}`)
+                "
+              />
+              <source
+                :type="`image/${media.path.match(/[0-9a-z]+$/i)[0]}`"
+                :srcset="require(`../assets/projects/${media.path}`)"
+              />
+              <img
+                :src="require(`../assets/projects/${media.path}`)"
+                :alt="media.alt"
+                loading="lazy"
+              />
+            </picture>
           </div>
         </template>
       </div>
