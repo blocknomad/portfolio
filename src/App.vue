@@ -1,6 +1,19 @@
 <template>
-  <router-view />
+  <Intro />
+  <Work />
 </template>
+
+<script>
+import Intro from "@/views/Intro.vue";
+import Work from "@/views/Work.vue";
+
+export default {
+  components: {
+    Intro,
+    Work,
+  },
+};
+</script>
 
 <style>
 body {
