@@ -15,7 +15,10 @@
           v-for="project in projects"
           :key="project.name"
         >
-          <img :src="require(`../assets/projects/${project.img}`)" :alt="project.alt" />
+          <img
+            :src="require(`../assets/projects/${project.img}`)"
+            :alt="project.alt"
+          />
         </div>
       </div>
       <Sled v-if="currentProject === 'sled'" />
@@ -84,8 +87,6 @@ export default {
 .work__content__cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 10px;
-  row-gap: 10px;
   margin-top: 5rem;
 }
 
@@ -99,6 +100,15 @@ export default {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.work__content__cards__item:nth-child(even) {
+  margin-left: 10px;
+}
+
+.work__content__cards__item:nth-child(1),
+.work__content__cards__item:nth-child(2) {
+  margin-bottom: 10px;
 }
 
 .work__content__cards__item:hover,
@@ -118,6 +128,14 @@ export default {
 
   .work__content__cards {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .work__content__cards__item:nth-child(1), .work__content__cards__item:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .work__content__cards__item:not(:first-child) {
+    margin-left: 10px;
   }
 }
 </style>

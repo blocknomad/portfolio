@@ -68,7 +68,6 @@ section::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  column-gap: 40px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -95,7 +94,6 @@ section::after {
 
 .profile__links {
   display: flex;
-  column-gap: 40px;
   background-color: var(--background-color--lighter);
   padding: 14px 28px;
   border-radius: 6px;
@@ -104,6 +102,10 @@ section::after {
 .profile__links__item {
   opacity: 0.7;
   transition: opacity 0.2s;
+}
+
+.profile__links__item:not(:first-child) {
+  margin-left: 40px;
 }
 
 .profile__links__item:hover {

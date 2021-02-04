@@ -211,13 +211,16 @@ export default {
   padding: 3px 6px;
   box-sizing: border-box;
   display: flex;
-  column-gap: 3px;
 }
 
 .project__medias__slider__item__browser-frame div {
   height: 7px;
   width: 7px;
   border-radius: 50%;
+}
+
+.project__medias__slider__item__browser-frame div:not(:first-child) {
+  margin-left: 3px;
 }
 
 .project__medias__slider__item__browser-frame div:first-child {
@@ -234,7 +237,6 @@ export default {
 
 .project__medias__slider-controls {
   display: flex;
-  column-gap: 15px;
   justify-content: center;
 }
 
@@ -245,6 +247,10 @@ export default {
   background-color: var(--background-color--lighter);
   cursor: pointer;
   transition: transform 0.2s;
+}
+
+.project__medias__slider-controls__item:not(:first-child) {
+  margin-left: 15px;
 }
 
 .project__medias__slider-controls__item:hover:not(.project__medias__slider-controls__item--active) {
@@ -263,7 +269,10 @@ export default {
 
   .project__medias__slider__item__browser-frame {
     padding: 6px 12px;
-    column-gap: 5px;
+  }
+
+  .project__medias__slider__item__browser-frame div:not(:first-child) {
+    margin-left: 5px;
   }
 
   .project__medias__slider__item__browser-frame div {
