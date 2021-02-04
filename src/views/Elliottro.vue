@@ -21,6 +21,7 @@
     </template>
     <template v-slot:technologies>
       <li>Meteor.js</li>
+      <li>Python</li>
       <li>MongoDB</li>
       <li>React.js</li>
       <li>Material Design</li>

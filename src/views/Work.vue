@@ -19,8 +19,8 @@
         </div>
       </div>
       <Sled v-if="currentWork === 'sled'" />
-      <Vanna v-else-if="currentWork === 'vanna'" />
       <Elliottro v-else-if="currentWork === 'elliottro'" />
+      <Vanna v-else-if="currentWork === 'vanna'" />
       <Appetize v-else-if="currentWork === 'appetize'" />
     </div>
   </section>
@@ -40,12 +40,12 @@ const works = [
     img: "sled-logo.svg",
   },
   {
-    name: "vanna",
-    img: "vanna-logo.png",
-  },
-  {
     name: "elliottro",
     img: "elliottro-logo.svg",
+  },
+  {
+    name: "vanna",
+    img: "vanna-logo.png",
   },
   {
     name: "appetize",
