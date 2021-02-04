@@ -16,6 +16,7 @@
     <template v-slot:summary>
       Website developed for a digital commerce platform for food, beverage and
       retail company.
+      <a href="http://appetizedev.wpengine.com/">See it online.</a>
     </template>
     <template v-slot:about>
       As a Front End engineer, I have implemented the website's pages using

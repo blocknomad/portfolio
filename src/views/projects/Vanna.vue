@@ -15,6 +15,7 @@
     </template>
     <template v-slot:summary>
       Subscriptions management and automatic electronic invoices issuance app.
+      <a href="https://vanna.app/">See it online.</a>
     </template>
     <template v-slot:about>
       As a Full Stack engineer, I participated actively on new architectural and

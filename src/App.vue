@@ -66,4 +66,13 @@ li {
   opacity: 0.6;
   line-height: 1.9rem;
 }
+
+a {
+  text-decoration: none;
+  color: #5abfdc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
 </style>

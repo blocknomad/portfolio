@@ -12,7 +12,7 @@
     </template>
     <template v-slot:summary>
       Website and blog developed for the launch of the new brand of a fintech
-      startup.
+      startup. <a href="https://www.sled.com.br/">See it online.</a>
     </template>
     <template v-slot:about>
       These projects were developed as a Front End engineer at Sled. I acted
