@@ -1,5 +1,9 @@
 <template>
-  <div class="project">
+  <div v-show="!hasLoadedFirstMedia" class="spinner"></div>
+  <div
+    class="project"
+    :style="`visibility: ${hasLoadedFirstMedia ? 'visible' : 'hidden'}`"
+  >
     <div class="project__heading">
       <h3>
         <slot name="title"></slot>
@@ -25,6 +29,7 @@
             <img
               :src="require(`../assets/projects/${media.path}`)"
               :alt="media.alt"
+              loading="lazy"
             />
           </div>
         </template>
@@ -68,6 +73,7 @@ export default {
     const currentMedia = ref(1);
     const currentZIndex = ref(3);
     const slideDirection = ref("right");
+    const hasLoadedFirstMedia = ref(false);
 
     watch(currentMedia, (currentMedia) => {
       const element = document.querySelector(
@@ -113,6 +119,7 @@ export default {
         ".project__medias__slider__item:nth-child(1) img, .project__medias__slider__item:nth-child(1) video"
       ).onload = () => {
         sliderContainer.style.height = `${sliderContainerChild.scrollHeight}px`;
+        hasLoadedFirstMedia.value = true;
       };
 
       startSlide();
@@ -123,12 +130,31 @@ export default {
       stopSlide,
       startSlide,
       currentMedia,
+      hasLoadedFirstMedia,
     };
   },
 };
 </script>
 
 <style>
+.spinner {
+  margin: 120px auto;
+  background-color: var(--background-color);
+  height: 90px;
+  width: 90px;
+  animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 .project {
   margin-top: 40px;
   padding: 20px 25px;
@@ -136,6 +162,19 @@ export default {
   background-color: var(--background-color);
   text-align: left;
   overflow: hidden;
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
 
 .project__heading {
