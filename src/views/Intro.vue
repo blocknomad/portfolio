@@ -59,7 +59,7 @@ section::after {
   width: 100%;
   height: 800px;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 0;
   z-index: 1;
 }
@@ -116,7 +116,7 @@ section::after {
 
 @media only screen and (min-width: 992px) {
   section::after {
-    top: 70%;
+    top: 60%;
     background-position-x: 0px;
   }
 }
@@ -125,7 +125,7 @@ section::after {
   section::after {
     background-size: cover;
     height: 41.66vw;
-    top: calc(100% - 10vw);
+    top: calc(100% - 17vw);
   }
 }
 </style>

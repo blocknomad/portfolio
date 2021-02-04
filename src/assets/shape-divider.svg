@@ -3,5 +3,13 @@
 		:root { background-color: #23364a }
 		path { fill: #0e2439 }
 	</style>
-	<path d="M 0 0 L 0 800 C 0 0 960 600 1920 0 L 1920 0 Z" />
+	<path>
+		<!-- id="path0" d="M 0 0 L 0 800 C 0 0 960 600 1920 0 L 1920 0 Z" /> -->
+
+	 <animate
+		attributeName="d"
+		values="M 0 0 L 0 700 C 0 0 960 600 1920 200 L 1920 0 Z; M 0 0 L 0 800 C 0 0 960 700 1920 50 L 1920 0 Z; M 0 0 L -30 800 C 0 0 960 700 1920 100 L 1920 0 Z; M 0 0 L 0 700 C 0 0 960 600 1920 200 L 1920 0 Z;"
+		dur="15s"
+		repeatCount="indefinite" />
+	</path>
 </svg>
