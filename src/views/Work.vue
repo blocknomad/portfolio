@@ -15,7 +15,7 @@
           v-for="work in works"
           :key="work.name"
         >
-          <img :src="require(`../assets/work/${work.img}`)" />
+          <img :src="require(`../assets/projects/${work.img}`)" />
         </div>
       </div>
       <Sled v-if="currentWork === 'sled'" />
@@ -29,10 +29,10 @@
 <script>
 import { ref } from "vue";
 
-import Sled from "@/views/Sled.vue";
-import Vanna from "@/views/Vanna.vue";
-import Elliottro from "@/views/Elliottro.vue";
-import Appetize from "@/views/Appetize.vue";
+import Sled from "@/views/projects/Sled.vue";
+import Vanna from "@/views/projects/Vanna.vue";
+import Elliottro from "@/views/projects/Elliottro.vue";
+import Appetize from "@/views/projects/Appetize.vue";
 
 const works = [
   {

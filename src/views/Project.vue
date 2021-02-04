@@ -22,7 +22,7 @@
               <div></div>
               <div></div>
             </div>
-            <img :src="require(`../assets/work/${media}`)" />
+            <img :src="require(`../assets/projects/${media}`)" />
           </div>
         </template>
       </div>
