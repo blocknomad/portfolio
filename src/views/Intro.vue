@@ -5,8 +5,7 @@
       <div class="profile__description">
         <h1>Yuri Jean Fabris</h1>
         <p>
-          Full Stack JavaScript Engineer. Digital nomad at some time in life.
-          Indiehacker wannabe.
+          Full Stack JavaScript Engineer
         </p>
       </div>
       <div class="profile__links">
