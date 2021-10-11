@@ -16,7 +16,7 @@
     </template>
     <template v-slot:about>
       These projects were developed as a Front End engineer at Sled. I acted
-      closely to marketing and product teams to assess the technical viability
+      closely with marketing and product teams to assess the technical viability
       of features and help them fill up UI gaps left by the designer, besides
       effectively implementing the website and blog.
       <br />
